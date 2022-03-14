@@ -4,24 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steph Curry Tribute</title>
+    <title>Rate Dauthy's Skills</title>
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="page">
+
     <img src="https://wallpaperaccess.com/full/2853774.png" alt="" class="bg-img">
+
     <h1 id="title" class="center-text">
       How good is Dauthy at coding
     </h1>
     <p id="description">
       Submit your opinion to help me improve
-    </p>
+    </p><br><br><br>
+
     <main id="main">
       <div class="form-sec">
         <form id="survey-form">
+
           <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name" id="name-label" class="input-heading">Name</label>
             <input 
             type="text" 
             id="name" 
@@ -32,14 +36,84 @@
           </div>
           <br>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email" id="email-label" class="input-heading">Email</label>
             <input 
-            type="text" 
+            type="email" 
             id="email" 
             name="email" 
             class="text-field"
             placeholder="Enter your email"
             required>
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="age" id="number-label" class="input-heading">Age</label>
+            <label for="age" style="font-size: 1rem;" class="input-heading">(not required)</label>
+            <input 
+            type="number" 
+            id="number" 
+            min="10"
+            max="99"
+            name="age" 
+            class="text-field"
+            placeholder="Enter your age">
+          </div>
+          <br>
+
+          <div class="form-group">
+            <label for="dropdown"  class="input-heading">How did you learn about me</label>
+            <select
+            id="dropdown"
+            name="how-u-hear"
+            class="text-field"
+            required>
+              <option disabled selected value>Select How You Found Me</option>
+              <option value="Online">Online</option>
+              <option value="Job application">Job Application</option>
+              <option value="In person">In Person</option>
+              <option value="preferNo">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+
+            <div class="form-group">
+              <p class="input-heading">How would you rate my skills in web dev</p>
+              <input type="radio" id="great-web" name="how-good-web" value="great-web"><label for="great-web"> Great</label><br>
+              <input type="radio" id="good-web" name="how-good-web" value="good-web"><label for="good-web"> Good</label><br>
+              <input type="radio" id="ok-web" name="how-good-web" value="ok-web"><label for="ok-web"> Ok</label><br>
+              <input type="radio" id="bad-web" name="how-good-web" value="bad-web"><label for="bad-web"> Bad</label><br>
+              <input type="radio" id="terrible-web" name="how-good-web" value="terrible-web"><label for="terrible-web"> Terrible</label>
+            </div>
+
+            <div class="form-group">
+              <p class="input-heading">How would you rate my skills in python</p>
+              <input type="radio" id="great-py" name="how-good-py" value="great-py"><label for="great-py"> Great</label><br>
+              <input type="radio" id="good-py" name="how-good-py" value="good-py"><label for="good-py"> Good</label><br>
+              <input type="radio" id="ok-py" name="how-good-py" value="ok-py"><label for="ok-py"> Ok</label><br>
+              <input type="radio" id="bad-py" name="how-good-py" value="bad-py"><label for="bad-py"> Bad</label><br>
+              <input type="radio" id="terrible-py" name="how-good-py" value="terrible-py"><label for="terrible-py"> Terrible</label>
+            </div>
+
+            <div class="form-group">
+              <p class="input-heading">What should I learn next</p>
+              <input type="checkbox" id="javascript" name="improve" value="javascript"><label for="javascript"> Javascript</label><br>
+              <input type="checkbox" id="python" name="improve" value="python"><label for="python"> More python</label><br>
+              <input type="checkbox" id="pixel" name="improve" value="pixel"><label for="pixel"> Pixel art</label><br>
+              <input type="checkbox" id="react" name="improve" value="react"><label for="react"> Reast.js</label><br>
+              <input type="checkbox" id="css" name="improve" value="css"><label for="css"> Better CSS</label>
+            </div>
+
+            <div class="form-group">
+              <p class="input-heading">Any comments or suggestions?</p>
+              <textarea
+              id="comments"
+              class="text-field input-textarea"
+              name="comment"
+              placeholder="Enter your comment here..."
+              ></textarea>
+            </div>
+
+            <input type="submit" id="submit" class="text-field">
           </div>
         </form>
       </div>
